@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+#form-container img {
+    width: 300px;
+}
+#register-form {
+    background-color: #278ef0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+#register-form p {
+    color: white;
+    font-family: 'bold';
+    font-size: 25px;
+}
+#register-form input {
+    margin-bottom: 25px;
+    font-family: 'regular';
+} 
+
+#submit-button{
+    background-color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    width: 80px;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 6px #67b4fc;
+    cursor: pointer;
+}
+#submit-button:hover {
+    background-color: #d3e9fd;
+}
+#email {
+    border-radius: 15px;
+    outline: none;
+    height: 20px;
+    border: none;
+    font-size: 100%;
+    padding: 10px;
+}
+#password {
+    border-radius: 15px;
+    height: 20px;
+    outline: none;
+    border: none;
+    font-size: 100%;
+    padding: 10px;
+}
+#password-confirmation {
+    border-radius: 15px;
+    height: 20px;
+    outline: none;
+    border: none;
+    font-size: 100%;
+    padding: 10px;
+}
+#result-panel {
+    padding: 10px;
+    color: #0173df;
+    font-family: 'bold';
+    margin-top: 30px;
+}
+#result-panel a{
+    text-decoration: none;
+    color: #0173df;
+}
+#result-panel a:hover {
+    transition: 500ms;
+    color: black;
+}
+
+@media screen and (max-width: 600px){
+    #form-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    #form-container img {
+        display: none;
+    }
+    #result-panel {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #result-panel a {
+        margin-top: 10px;
+        text-decoration: underline;
+    }
+    #submit-button:hover {
+        background-color: white;
+    }
+}
