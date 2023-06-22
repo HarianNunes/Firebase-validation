@@ -65,6 +65,12 @@ body {
     color: black;
     font-family: 'bold';
 }
+#loginSuccess {
+    font-family: 'bold';
+    background-color: #27f06a;
+    padding: 10px;
+    margin: 0;
+}
 
 @media screen and (max-width: 600px) {
     #form-container {

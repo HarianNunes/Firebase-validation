@@ -1,97 +1,189 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  padding: 0;
+}
+
+#container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#cabecalho, #menu {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(0, 0, 59);
+  padding-bottom: 15px;
 }
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+#logo {
+  margin-right: 10px;
+  padding-top: 25px;
+  padding-left: 50px;
+  width: 60px;
+  height: auto;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+#logoName {
+  font-family: 'Bold';
+  font-size: 35px;
+  margin: 0;
+  margin-top: auto;
+  color: white;
+  cursor: pointer;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#menu {
+  margin-left: auto;
+  margin-right: 50px;
+}
+#menu p {
+  font-family: 'bold';
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  margin-left: 80px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+#menu p:hover {
+  transition: 200ms;
+  color: blueviolet;
+}
+
+#img-main-service {
+  width: 800px;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url('/src/img/back.jpg');
+  background-size: 100%;
+}
+#contentMain {
+  margin: 0 100px;
+  font-family: 'regular';
+  color: white;
+  font-size: 30px;
+  text-align: justify;
+  background-color: rgba(107, 107, 107, 0.116);
+}
+#footer {
+  background-color: rgb(0, 0, 59);
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0;
+}
+#links {
+  margin: auto 0;
+}
+#links img {
+  margin-left: 20px;
+  cursor: pointer;
+}
+#links img:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+}
+
+#copyright {
+  color: white;
+  font-family: 'regular';
+  margin: auto auto;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  color: white;
+  font-family: 'regular';
+}
+#email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#email img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#phone img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#phone p:hover, #email p:hover {
+  transition: 200ms;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  #cabecalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  a:hover {
-    color: #747bff;
+  #logo {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
   }
-  button {
-    background-color: #f9f9f9;
+  #menu {
+    margin: 0;
+    padding: 0;
+  }
+  #menu p {
+    margin:20px 20px;
+  }
+  #main {
+    flex-direction: column;
+    background-size: auto;
+  }
+  #main img {
+    width: 300px;
+  }
+  #main p {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  #contentMain {
+    margin: 0 30px;
+    margin-bottom: 30px;
+  }
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #links {
+    display: flex;
+    flex-direction: row;
+  }
+  #links img{
+    width: 30px;
+  }
+  #copyright {
+    margin: 0;
+    margin-top: 10px;
+  }
+  #contacts {
+    margin: 0;
   }
 }
